@@ -4,6 +4,7 @@ import {sortProducts} from "./ui/sortProducts.js";
 
 
 
+
 const url = "https://t9jt3myad3.execute-api.eu-west-2.amazonaws.com/api/products";
 
 async function getProducts() {
@@ -12,11 +13,12 @@ async function getProducts() {
         const result = await response.json();
         const products = result.data;
 
-        
 
     renderProducts(products);
 
     sortProducts(products);
+
+ 
 
 
     } catch (error) {

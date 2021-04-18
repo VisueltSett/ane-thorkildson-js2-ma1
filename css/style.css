@@ -3,39 +3,46 @@
 * {
 	box-sizing: border-box;
 }
-html{
-    height: 100%;
+html,
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
-    color: rgb(0, 0, 0, .75);
-	margin: 0;
-    padding: 0;
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-   background-repeat: no-repeat;
-   background-size: cover;
-    height: 100%;
+	color: rgb(0, 0, 0, 0.75);
+	background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+	background-size: 100% !important;
+	background-repeat: no-repeat;
 }
 
+h1,
 h2 {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	margin: 0;
 }
+h3 {
+	margin: 1rem 0 0;
+	padding: 1rem 0;
+}
 
 .container {
-	max-width: 900px;
-	margin: 0 auto 20px;
-    height: 100%;
+	width: 85%;
+	margin: 0 auto;
+	padding: 0 1rem;
+	height: 100%;
 }
 
 .products-container {
+	margin-top: 2rem;
 	display: flex;
-	flex-wrap: wrap;
-    align-content: center;
-    
+	flex-flow: row wrap;
+	align-content: flex-start;
+	height: 100%;
 }
 
 .product {
@@ -44,18 +51,44 @@ h2 {
 	background: white;
 	border: 1px solid grey;
 	border-radius: 1rem;
-	min-width: 300px;
-
+	width: 300px;
 	position: relative;
 }
 
 .sortByPrice {
 	margin: 2rem 1rem;
-	padding: 0.5rem;
-    border-radius: 1rem;
-    background: white;
-    border: 1px solid black;
-	min-width: 240px;
+	padding: 0.8rem 1rem;
+	border-radius: 0.8rem;
+	background: white;
+	border: 1.5px solid black;
+	min-width: 300px;
+}
+
+.product i {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 30px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+i.fas {
+	color: darkmagenta;
+}
+
+.menu {
+	margin: 20px 0;
+}
+
+.menu a {
+	color: rgb(0, 0, 0, 0.5);
+	text-decoration: none;
+}
+
+.menu a.active {
+	color: darkmagenta;
+	font-weight: 500;
 }
 
 .message {
@@ -70,11 +103,6 @@ h2 {
 	color: red;
 }
 
-.message.no-results {
-	border-color: rgb(72, 61, 139);
-	color: black;
-}
-
 .message.success {
 	border-color: green;
 	color: green;
@@ -84,8 +112,9 @@ h2 {
 .lds-roller {
 	display: inline-block;
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
+	margin: 2rem auto;
 }
 .lds-roller div {
 	animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

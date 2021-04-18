@@ -1,5 +1,5 @@
-import { displayMessage } from "./displayMessage.js";
 import {renderProducts} from "./renderProducts.js"
+const productsContainer = document.querySelector(".products-container");
 
 
 export function sortProducts(products){
@@ -14,15 +14,12 @@ export function sortProducts(products){
             function(product) {
                 if(parseFloat(product.price) <= priceValue){
                     return true;
-                } else {
-                displayMessage("no-results", `error`, ".products-container");
+                } 
+                else {
+                productsContainer.innerHTML = "No products matches your query";
                 }
-               
             });
 
             renderProducts(filteredProducts);
     }
 }
-
-  
-    
