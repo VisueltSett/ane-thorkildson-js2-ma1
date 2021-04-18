@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Filter by max price</title>
+		<title>Wishlist</title>
 		<link href="css/style.css" rel="stylesheet" />
 		<link rel="icon" href="data:;base64,=" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,31 +15,16 @@
 			src="https://kit.fontawesome.com/62db01abf1.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/index.js" type="module" defer></script>
+		<script src="js/wishlist.js" type="module" defer></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="menu">
-				<a href="index.html" class="active">Home</a> |
-				<a href="wishlist.html">Wishlist</a>
+				<a href="index.html">Home</a> |
+				<a href="wishlist.html" class="active">Wishlist</a>
 			</div>
-			<h1>Products</h1>
-			<input
-				class="sortByPrice"
-				placeholder="Sort by max price - Enter price..."
-			/>
-			<div class="products-container">
-				<div class="lds-roller">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-			</div>
+			<h1>Wishlist</h1>
+			<div class="products-container"></div>
 		</div>
 	</body>
 </html>

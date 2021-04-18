@@ -14,9 +14,9 @@ export function sortProducts(products){
             function(product) {
                 if(parseFloat(product.price) <= priceValue){
                     return true;
-                } 
-                else {
-                productsContainer.innerHTML = "No products matches your query";
+                }
+                else if (!(parseFloat(product.price) <= priceValue)){
+                    productsContainer.innerHTML = "No products matches your query";
                 }
             });
 
