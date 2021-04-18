@@ -73,8 +73,11 @@ h3 {
 	cursor: pointer;
 }
 
-i.fas {
-	color: darkmagenta;
+.fas {
+	color: magenta;
+}
+.far {
+	color: black;
 }
 
 .menu {
